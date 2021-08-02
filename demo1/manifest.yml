@@ -1,0 +1,18 @@
+---
+applications:
+
+  - name: hdiconf
+    path: ./gen/db
+    no-route: true
+    health-check-type: process
+    memory: 512M
+    services:
+      - somehdi
+
+
+  - name: capml1
+    path: .
+    random-route: true
+    memory: 512M
+    services:
+      - somehdi      

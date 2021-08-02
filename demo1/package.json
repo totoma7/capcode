@@ -1,0 +1,43 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^3.18.4",
+    "@sap/hana-client": "^2.9.23",
+    "@sap/hdi-deploy": "^4.1.0",
+    "antlr4": "^4.9.2",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-pretty-data": "^0.1.2",
+    "gulp-tap": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "hdb": "^0.18.3",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "16.2.0",
+    "npm": "7.20.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "cds build/all --clean",
+    "deploy": "cds deploy",
+    "start": "cds run"
+  },
+  "cds": {
+    "hana": {
+      "deploy-format": "hdbtable",
+      "syntax": "hdi"
+    },
+    "requires": {
+      "[production]": {
+        "kind": "hana"
+      }
+    }
+  }
+}
